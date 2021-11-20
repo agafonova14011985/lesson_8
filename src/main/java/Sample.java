@@ -29,13 +29,13 @@ public class Sample {
             //месторасположения окна относительно другого окна
             setLocationRelativeTo(null);//по центру
              // название окна
-            setTitle("Мое окна");
+            setTitle("Window");
 
             JPanel panel = new JPanel();
             panel.setLayout(new FlowLayout());
             //добавить кнопки
-            JButton button1 = new JButton("Кнопка 1");
-            JButton button2 = new JButton("Кнопка 2");
+            JButton button1 = new JButton("Кнопка -");
+            JButton button2 = new JButton("Кнопка +");
             //добавить кнопку
            // add(button1, BorderLayout.WEST);//расположение элементов BorderLayout.WEST || EAST
             //add(button2, BorderLayout.EAST);
@@ -44,7 +44,7 @@ public class Sample {
             add (panel, BorderLayout.NORTH);
 
             // события для кнопок
-            final JLabel label = new JLabel("Нажми на кнопку");
+            final JLabel label = new JLabel("  " +"Нажми на кнопку");
             //шрифт задать
             label.setFont(new Font("Arial", Font.BOLD, 40));
             add(label);
@@ -58,12 +58,12 @@ public class Sample {
 
         //при нажатии на кнопку работать будут счетчик
 
-        label.setText("Счетчик" + --counter);
+        label.setText("  " + "Counter" + --counter);
     }
 });
     button2.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
-            label.setText("Counter" + ++counter);
+            label.setText( "  " + "Counter" + ++counter);
         }
     });
     //button2.addActionListener(e -> label.setText("Counter" + ++counter));
